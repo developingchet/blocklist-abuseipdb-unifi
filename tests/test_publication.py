@@ -63,6 +63,10 @@ class PublicationTests(unittest.TestCase):
                 return result
             publish(b"1.2.3.4\n")
             first = head()
+            self.assertRegex(
+                git(remote, "log", "-1", "--format=%s", "feeds"),
+                r"^Sync AbuseIPDB feeds: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2} UTC$",
+            )
             self.assertEqual(git(remote, "ls-tree", "--name-only", "feeds"), "feed.txt")
             self.assertEqual(git(remote, "show", "feeds:feed.txt"), "1.2.3.4")
             result = publish(b"1.2.3.4\n", first)

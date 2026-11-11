@@ -51,6 +51,13 @@ Names above assume `--output feeds`; other output names use the same naming patt
 
 The hourly watchdog shares GitHub Actions' scheduler. For unattended operation, use an independent monitor that checks `manifest.json`: `generated_at` and every feed's `upstream_updated_at` should be no older than three hours. A stopped scheduler cannot report its own failure.
 
+Publication commit messages include the actual UTC publication date and time.
+CodeQL, OpenSSF Scorecard, Dependabot, and Socket provide the same automation
+checks used by the maintainer's other repositories. Socket requires the
+`SOCKET_SECURITY_API_KEY` Actions secret. If it is absent, the workflow explicitly
+reports a skipped scan. Tool dependencies live under `.github/requirements` and
+are installed with hashes; they are not dependencies of the converter.
+
 After the first hosted run, verify all generated URLs, imported UniFi counts, firewall policy references, and a subsequent automatic gateway refresh. Local tests cannot certify the gateway integration.
 
 Hourly mirroring and a daily gateway refresh can still leave data roughly 25 hours behind upstream under normal timing, and longer when jobs are delayed or fail. UniFi downloads parts independently, so imports are not transactional across multiple URLs.

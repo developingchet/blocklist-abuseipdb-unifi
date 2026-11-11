@@ -46,8 +46,12 @@ Times are UTC. [GitHub schedules can be delayed, dropped, or disabled](https://d
 
 [Local commands, recovery, monitoring, and deployment checks](docs/OPERATIONS.md)
 
+[Report a bug](https://github.com/developingchet/blocklist-abuseipdb-unifi/issues/new/choose) · [Contribute](CONTRIBUTING.md) · [Security disclosure](.github/SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md)
+
 ## Credits and permission
 
 Data comes from [borestad](https://github.com/borestad/blocklist-abuseipdb), [AbuseIPDB](https://www.abuseipdb.com/), [IPinfo](https://ipinfo.io/), and upstream's other sources. This project only converts formats; it adds no independent scoring or addresses and is not affiliated with those projects or Ubiquiti.
 
 **Obtain authorization before publishing a public mirror.** Borestad does not declare a license; its permission to publish does not automatically cover redistribution. See [AbuseIPDB's terms](https://www.abuseipdb.com/legal) and [API documentation](https://docs.abuseipdb.com/).
+
+The converter and project documentation are [MIT licensed](LICENSE). That license does not cover mirrored third-party data or grant redistribution rights to it.

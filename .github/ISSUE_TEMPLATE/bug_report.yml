@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a conversion, publication, or UniFi import problem
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check existing issues and the README first. Report vulnerabilities through
+        the private security link instead. Remove credentials and private network
+        details from all reports.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Feed contents or format
+        - GitHub Actions or publication
+        - UniFi import or refresh
+        - Local converter
+        - Documentation
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Affected commit or workflow run
+      description: Link the run or commit; for published feeds, include the manifest revision if available.
+    validations:
+      required: true
+  - type: input
+    id: feed
+    attributes:
+      label: Feed URL and time window
+      description: Include all affected parts, or write N/A.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: For UniFi, include gateway model and OS/Network versions. For local runs, include OS and Python version.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or error
+      description: Remove tokens, credentials, and private network details.
+      render: text

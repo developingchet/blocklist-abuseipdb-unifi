@@ -78,7 +78,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m 'Publish validated AbuseIPDB TXT/CSV feeds'
+          git commit -m "Sync AbuseIPDB feeds: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           git push --force-with-lease="refs/heads/feeds:$FEEDS_OLD_HEAD" origin HEAD:refs/heads/feeds
 
       - name: Report failed publication
