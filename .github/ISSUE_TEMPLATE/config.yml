@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/developingchet/blocklist-abuseipdb-unifi/security/advisories/new
+    about: Report vulnerabilities privately, without posting exploit details in public issues.
+  - name: Feed directory and setup
+    url: https://github.com/developingchet/blocklist-abuseipdb-unifi#unifi-setup
+    about: Find feed URLs, gateway limits, and setup instructions.
