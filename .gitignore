@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+feeds/
+.feeds-*/
+.feeds.lock
+.feeds.previous/
