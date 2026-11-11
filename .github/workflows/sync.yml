@@ -8,6 +8,12 @@ on:
     # Read-only watchdog, 30 minutes after each synchronization.
     - cron: "53 * * * *"
   workflow_dispatch:
+    inputs:
+      force_republish:
+        description: Rebuild and republish even when the upstream revision is unchanged
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -35,6 +41,7 @@ jobs:
         id: convert
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          FORCE_REPUBLISH: ${{ github.event_name == 'workflow_dispatch' && inputs.force_republish }}
         shell: bash
         run: |
           set -euo pipefail
@@ -48,7 +55,11 @@ jobs:
             previous=(--previous-manifest "$RUNNER_TEMP/previous-manifest.json")
           fi
           echo "FEEDS_OLD_HEAD=$old_head" >> "$GITHUB_ENV"
-          python3 sync.py --output "$RUNNER_TEMP/feeds" --skip-unchanged "${previous[@]}"
+          options=(--skip-unchanged)
+          if [[ "$FORCE_REPUBLISH" == 'true' ]]; then
+            options=()
+          fi
+          python3 sync.py --output "$RUNNER_TEMP/feeds" "${options[@]}" "${previous[@]}"
 
       - name: Publish all ten time windows on feeds branch
         if: steps.convert.outputs.changed == 'true'
