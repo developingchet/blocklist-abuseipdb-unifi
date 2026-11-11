@@ -3,9 +3,7 @@ name: Test converter
 on:
   push:
     branches: [main]
-    paths: ['**.py', '.github/workflows/**']
   pull_request:
-    paths: ['**.py', '.github/workflows/**']
   workflow_dispatch:
 
 permissions:

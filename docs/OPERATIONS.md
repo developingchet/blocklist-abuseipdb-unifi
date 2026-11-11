@@ -52,6 +52,11 @@ Names above assume `--output feeds`; other output names use the same naming patt
 The hourly watchdog shares GitHub Actions' scheduler. For unattended operation, use an independent monitor that checks `manifest.json`: `generated_at` and every feed's `upstream_updated_at` should be no older than three hours. A stopped scheduler cannot report its own failure.
 
 Publication commit messages include the actual UTC publication date and time.
+To verify publication after a converter or workflow update, manually run
+**Sync AbuseIPDB feeds** with **force_republish** enabled. It still validates
+source freshness and all feeds; normal hourly runs continue skipping unchanged
+revisions. Tests run on every pull request, including documentation changes, so
+the required `test` check is always reported.
 CodeQL, OpenSSF Scorecard, Dependabot, and Socket provide the same automation
 checks used by the maintainer's other repositories. Socket requires the
 `SOCKET_SECURITY_API_KEY` Actions secret. If it is absent, the workflow explicitly
