@@ -2,7 +2,6 @@
 
 [![Sync](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml)
 [![Socket](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/developingchet/blocklist-abuseipdb-unifi/badge)](https://scorecard.dev/viewer/?uri=github.com/developingchet/blocklist-abuseipdb-unifi)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](CONTRIBUTING.md)
 [![Code license: MIT](https://img.shields.io/badge/code_license-MIT-yellow.svg)](LICENSE)
 
