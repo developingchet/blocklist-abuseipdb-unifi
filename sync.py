@@ -238,8 +238,8 @@ def write_catalog(output: Path, manifest: dict) -> None:
         "",
         "All 10 IPv4 time windows are published together. Every TXT and CSV is headerless,",
         "comment-free and contains one IPv4 address/CIDR per line. UniFi TXT parts contain",
-        "at most 100,000 entries. Windows above 500,000 entries exceed the documented",
-        "UniFi gateway aggregate capacity; other configured lists also consume capacity.",
+        "at most 100,000 entries, the mirror's configured chunk size. Verify your gateway's",
+        "per-list and total capacity before importing; full mirror availability does not guarantee it fits.",
         "",
         "| Window | Entries | Full TXT | Full CSV | UniFi TXT parts |",
         "| --- | ---: | --- | --- | --- |",
@@ -263,7 +263,7 @@ def write_catalog(output: Path, manifest: dict) -> None:
         f"Source revision: [`{manifest['upstream_revision']}`]"
         f"(https://github.com/borestad/blocklist-abuseipdb/commit/{manifest['upstream_revision']})",
         "",
-        "[UniFi setup, per-list/total limits, updates and redistribution notice]"
+        "[UniFi setup, capacity checks, updates and redistribution notice]"
         f"(https://github.com/{repository}#unifi-setup) | [Machine-readable manifest](manifest.json)",
         "",
     ]

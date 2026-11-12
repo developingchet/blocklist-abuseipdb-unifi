@@ -12,7 +12,7 @@ Requires a supported gateway running **UniFi OS 6.0.10+ and Network 11** with Ex
 2. In **Settings → Networks → Network Lists → Create New**, choose **Type: IP**, **Source: Dynamic**. Create one list for **each UniFi part URL** in that window. Set refresh to **24 hours**.
 3. Add those lists to your [firewall policies](https://help.ui.com/hc/en-us/articles/115003173168-Zone-Based-Firewalls-in-UniFi), then check imported counts and refresh status. Importing alone does **not** block traffic.
 
-**Limits:** [UniFi integration guidance](https://qfeeds.com/knowledge-base/unifi-setup/) reports **100,000 entries per list and 500,000 total per gateway**, including other configured lists. Verify these limits on your version. Windows above 500,000 entries are fully mirrored but cannot fit within that gateway limit. Do not import all ten overlapping windows; [borestad recommends 30 days or less](https://github.com/borestad/blocklist-abuseipdb#readme).
+**Capacity:** This mirror splits feeds into parts of up to **100,000 entries**. That is the mirror's chunk size, not a verified gateway limit. Check your gateway's per-list and total capacity before importing; publishing a complete window does not guarantee it will fit. Ubiquiti describes external Network Lists in its [Network 11 overview](https://blog.ui.com/article/introducing-unifi-network-11), but that page does not specify numeric capacity limits. Choose one window; [borestad recommends 30 days or less](https://github.com/borestad/blocklist-abuseipdb#readme).
 
 ## Available feeds
 
