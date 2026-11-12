@@ -289,6 +289,15 @@ class FeedTests(unittest.TestCase):
                         self.assertRaisesRegex(ValueError, "overdue"):
                     sync.check_health("https://example.test/manifest.json")
 
+    def test_health_failure_identifies_stale_window_and_age(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "feeds"
+            self.publish(output)
+            manifest = json.loads((output / "manifest.json").read_text())
+            manifest["feeds"]["abuseipdb-s100-365d"]["upstream_updated_at"] = sync.timestamp(NOW - timedelta(hours=6))
+            with self.assertRaisesRegex(ValueError, r"365d upstream data is overdue:.*6\.0 hours old; maximum 3\.0 hours"):
+                sync.validate_freshness(manifest, NOW)
+
     def test_download_retries_transient_errors_but_not_not_found(self):
         response = MagicMock()
         response.__enter__.return_value.read.return_value = b"good"

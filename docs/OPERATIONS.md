@@ -49,7 +49,17 @@ Names above assume `--output feeds`; other output names use the same naming patt
 
 ## Monitoring and deployment checks
 
-The hourly watchdog shares GitHub Actions' scheduler. For unattended operation, use an independent monitor that checks `manifest.json`: `generated_at` and every feed's `upstream_updated_at` should be no older than three hours. A stopped scheduler cannot report its own failure.
+One hourly scheduled run attempts synchronization, then checks public freshness
+even when synchronization fails. Every delivered schedule event therefore tries
+to refresh the mirror; there are no separate health-only scheduled runs. The
+check resolves the current `feeds` commit before downloading its manifest to
+avoid stale branch-URL caches immediately after publication.
+
+GitHub's cron is best effort and may miss hours. For dependable hourly triggers,
+invoke `gh workflow run sync.yml --repo developingchet/blocklist-abuseipdb-unifi --ref main`
+from an independently operated scheduler. For unattended operation, also monitor
+`manifest.json`: `generated_at` and every feed's `upstream_updated_at` should be
+no older than three hours. A stopped scheduler cannot report its own failure.
 
 Publication commit messages include the actual UTC publication date and time.
 To verify publication after a converter or workflow update, manually run

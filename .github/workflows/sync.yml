@@ -5,8 +5,6 @@ on:
     # borestad schedules updates at :01 and :31 each hour (UTC).
     # Hourly, offset from upstream's :01 run; freshness is validated separately.
     - cron: "23 * * * *"
-    # Read-only watchdog, 30 minutes after each synchronization.
-    - cron: "53 * * * *"
   workflow_dispatch:
     inputs:
       force_republish:
@@ -24,7 +22,7 @@ concurrency:
 
 jobs:
   sync:
-    if: github.event.schedule != '53 * * * *' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     permissions:
       contents: write
     runs-on: ubuntu-24.04
@@ -97,7 +95,8 @@ jobs:
         run: echo '::error::Mirror publication failed. Previous public feeds remain available; inspect logs and rerun after resolving the failure.'
 
   health:
-    if: github.event.schedule == '53 * * * *'
+    needs: sync
+    if: always() && needs.sync.result != 'skipped'
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
@@ -106,8 +105,15 @@ jobs:
           persist-credentials: false
       - name: Check public mirror freshness
         env:
-          MANIFEST_URL: https://raw.githubusercontent.com/${{ github.repository }}/refs/heads/feeds/manifest.json
-        run: python3 sync.py --check-url "$MANIFEST_URL"
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Resolve the current published commit to avoid cached branch URLs
+          # reporting the old manifest immediately after a successful sync.
+          revision="$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/feeds" --jq '.object.sha')"
+          [[ "$revision" =~ ^[a-f0-9]{40}$ ]] || { echo 'Invalid published commit'; exit 1; }
+          python3 sync.py --check-url "https://raw.githubusercontent.com/$GITHUB_REPOSITORY/$revision/manifest.json"
       - name: Report overdue mirror
         if: failure()
         run: echo '::error::Public mirror freshness check failed. Check publication runs and upstream availability.'

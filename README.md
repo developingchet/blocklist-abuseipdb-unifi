@@ -1,13 +1,12 @@
 # blocklist-abuseipdb-unifi
 
 [![Sync](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml)
-[![CI](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/test.yml)
 [![Socket](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/developingchet/blocklist-abuseipdb-unifi/badge)](https://scorecard.dev/viewer/?uri=github.com/developingchet/blocklist-abuseipdb-unifi)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](CONTRIBUTING.md)
 [![Code license: MIT](https://img.shields.io/badge/code_license-MIT-yellow.svg)](LICENSE)
 
-An unofficial [borestad/blocklist-abuseipdb](https://github.com/borestad/blocklist-abuseipdb) mirror for UniFi. Checks for updates **every hour** and publishes clean TXT/CSV feeds: one IPv4 address or CIDR per line, with **no headers, comments, or ASN annotations**.
+An unofficial [borestad/blocklist-abuseipdb](https://github.com/borestad/blocklist-abuseipdb) mirror for UniFi. It is scheduled to check for updates **every hour** and publishes clean TXT/CSV feeds: one IPv4 address or CIDR per line, with **no headers, comments, or ASN annotations**.
 
 **[Browse feeds and copy download URLs →](https://github.com/developingchet/blocklist-abuseipdb-unifi/tree/feeds)**
 
@@ -45,8 +44,8 @@ No personal API key, server, containers, or third-party Python packages are need
 
 ## Updates
 
-- **At :23 each hour:** check upstream; download and publish only a new revision. Unchanged runs preserve timestamps.
-- **At :53 each hour:** check public feed freshness. Data older than **3 hours** fails the check.
+- **Scheduled at :23 each hour:** check upstream; download and publish only a new revision. Unchanged runs preserve timestamps.
+- **After each sync attempt:** check public feed freshness. Data older than **3 hours** fails the check.
 - Failed conversions preserve the last published feeds. Enable Actions failure notifications and inspect failed runs.
 
 Times are UTC. [GitHub schedules can be delayed, dropped, or disabled](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule). UniFi refreshes separately; hourly mirroring does not change its polling interval. Parts may temporarily contain different revisions during a gateway refresh.
