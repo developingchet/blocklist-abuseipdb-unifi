@@ -388,12 +388,20 @@ def validate_freshness(data: dict, now: datetime) -> None:
     try:
         if data["upstream"] != "borestad/blocklist-abuseipdb":
             raise ValueError("Published manifest has an unexpected upstream identity")
-        dates = [data["generated_at"]] + [data["feeds"][f"abuseipdb-s100-{d}d"]["upstream_updated_at"] for d in DAYS]
-        for value in dates:
+        dates = [("Published manifest", data["generated_at"])] + [
+            (f"abuseipdb-s100-{d}d upstream data", data["feeds"][f"abuseipdb-s100-{d}d"]["upstream_updated_at"])
+            for d in DAYS
+        ]
+        for label, value in dates:
             date = datetime.fromisoformat(value.replace("Z", "+00:00"))
             age = now - date
-            if age > MAX_PUBLICATION_AGE or age < -timedelta(minutes=10):
-                raise ValueError("Published mirror or upstream data is overdue or future-dated")
+            if age > MAX_PUBLICATION_AGE:
+                raise ValueError(
+                    f"{label} is overdue: timestamp {value}, {age.total_seconds() / 3600:.1f} hours old; "
+                    f"maximum {MAX_PUBLICATION_AGE.total_seconds() / 3600:.1f} hours"
+                )
+            if age < -timedelta(minutes=10):
+                raise ValueError(f"{label} is future-dated: {value}")
     except (KeyError, TypeError, AttributeError) as exc:
         raise ValueError("Published manifest has missing or invalid freshness metadata") from exc
 
