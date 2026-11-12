@@ -380,7 +380,7 @@ class FeedTests(unittest.TestCase):
 
 
     def test_exact_unifi_chunk_boundary(self):
-        # UniFi integrations document a 100,000-entry cap per IP list.
+        # Verify the mirror's configured 100,000-entry chunk boundary.
         entries = [f"198.{(n >> 16) & 255}.{(n >> 8) & 255}.{n & 255}" for n in range(100_001)]
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp)

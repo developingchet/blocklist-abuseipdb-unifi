@@ -1,5 +1,12 @@
 # blocklist-abuseipdb-unifi
 
+[![Sync](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/sync.yml)
+[![CI](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/test.yml)
+[![Socket](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml/badge.svg?branch=main)](https://github.com/developingchet/blocklist-abuseipdb-unifi/actions/workflows/socket.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/developingchet/blocklist-abuseipdb-unifi/badge)](https://scorecard.dev/viewer/?uri=github.com/developingchet/blocklist-abuseipdb-unifi)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](CONTRIBUTING.md)
+[![Code license: MIT](https://img.shields.io/badge/code_license-MIT-yellow.svg)](LICENSE)
+
 An unofficial [borestad/blocklist-abuseipdb](https://github.com/borestad/blocklist-abuseipdb) mirror for UniFi. Checks for updates **every hour** and publishes clean TXT/CSV feeds: one IPv4 address or CIDR per line, with **no headers, comments, or ASN annotations**.
 
 **[Browse feeds and copy download URLs →](https://github.com/developingchet/blocklist-abuseipdb-unifi/tree/feeds)**
@@ -12,7 +19,7 @@ Requires a supported gateway running **UniFi OS 6.0.10+ and Network 11** with Ex
 2. In **Settings → Networks → Network Lists → Create New**, choose **Type: IP**, **Source: Dynamic**. Create one list for **each UniFi part URL** in that window. Set refresh to **24 hours**.
 3. Add those lists to your [firewall policies](https://help.ui.com/hc/en-us/articles/115003173168-Zone-Based-Firewalls-in-UniFi), then check imported counts and refresh status. Importing alone does **not** block traffic.
 
-**Limits:** [UniFi integration guidance](https://qfeeds.com/knowledge-base/unifi-setup/) reports **100,000 entries per list and 500,000 total per gateway**, including other configured lists. Verify these limits on your version. Windows above 500,000 entries are fully mirrored but cannot fit within that gateway limit. Do not import all ten overlapping windows; [borestad recommends 30 days or less](https://github.com/borestad/blocklist-abuseipdb#readme).
+**Capacity:** This mirror splits feeds into parts of up to **100,000 entries**. That is the mirror's chunk size, not a verified gateway limit. Check your gateway's per-list and total capacity before importing; publishing a complete window does not guarantee it will fit. Ubiquiti describes external Network Lists in its [Network 11 overview](https://blog.ui.com/article/introducing-unifi-network-11), but that page does not specify numeric capacity limits. Choose one window; [borestad recommends 30 days or less](https://github.com/borestad/blocklist-abuseipdb#readme).
 
 ## Available feeds
 
