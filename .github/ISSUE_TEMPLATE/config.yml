@@ -1,8 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Usage questions and setup help
+    url: https://github.com/developingchet/blocklist-abuseipdb-unifi/blob/main/SUPPORT.md
+    about: Start here for feed selection, UniFi import and self-hosting questions.
   - name: Security vulnerability
     url: https://github.com/developingchet/blocklist-abuseipdb-unifi/security/advisories/new
     about: Report vulnerabilities privately, without posting exploit details in public issues.
-  - name: Feed directory and setup
-    url: https://github.com/developingchet/blocklist-abuseipdb-unifi#unifi-setup
-    about: Find feed URLs, gateway limits, and setup instructions.
+  - name: Published feed directory
+    url: https://github.com/developingchet/blocklist-abuseipdb-unifi/tree/feeds
+    about: Browse the generated feed URLs, part counts and manifest on the feeds branch.

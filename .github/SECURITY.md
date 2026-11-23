@@ -12,6 +12,11 @@ be updated by their operators. Generated feeds follow the current converter.
 Use [GitHub private vulnerability reporting](https://github.com/developingchet/blocklist-abuseipdb-unifi/security/advisories/new).
 Include the affected commit or workflow run, reproduction steps, expected and
 actual behavior, and impact. Remove credentials and private network details.
+GitHub keeps a private report confidential until the advisory is published.
+
+Reproduce only in an authorized session against a local fixture or a mirror you
+own. Do not contact live upstream feeds or production gateways as part of a
+report. For usage questions that are not vulnerabilities, see [SUPPORT.md](../SUPPORT.md).
 
 We aim to acknowledge reports within **3 business days**, provide a status update
 within **7 business days**, and remediate confirmed issues within **30 days**.
@@ -33,11 +38,12 @@ handles upstream data still belongs here.
 
 ## Dependency and automation checks
 
-Actions are pinned to commit SHAs and checked by Dependabot. CodeQL analyzes
-Python and Actions, and OpenSSF Scorecard checks repository practices. The
-converter has no third-party runtime packages. Socket scans automation/tool
-dependencies when `SOCKET_SECURITY_API_KEY` is configured; without it the job
-reports that scanning was skipped. Do not treat a skipped scan as acceptance.
+Actions are pinned to commit SHAs and checked by Dependabot. GitHub's CodeQL
+default setup analyzes Python and Actions, and OpenSSF Scorecard checks
+repository practices. The converter has no third-party runtime packages.
+Socket scans automation and tool dependencies when `SOCKET_SECURITY_API_KEY`
+is configured; without it the job reports that scanning was skipped. Do not
+treat a skipped scan as acceptance.
 
 GitHub schedules can be delayed or disabled. Operators should monitor published
 manifest timestamps independently; gateway refreshes are separate from mirror

@@ -8,6 +8,8 @@ Remove credentials and private network details from logs.
 
 Report vulnerabilities privately as described in the [security policy](.github/SECURITY.md).
 Participants must follow the [code of conduct](CODE_OF_CONDUCT.md).
+Usage questions belong in [SUPPORT.md](SUPPORT.md); [AGENTS.md](AGENTS.md) records
+the layout and the tested commands.
 
 ## Development
 

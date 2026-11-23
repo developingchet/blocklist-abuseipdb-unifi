@@ -12,6 +12,14 @@
 - [ ] Actions use full commit SHAs; tool dependencies remain hash-locked
 - [ ] Affected documentation is updated
 
+Tests not run, and why:
+
+<!-- List skipped checks and the reason. Write "none" when everything ran. -->
+
 ## Compatibility
 
 <!-- Describe any new part URLs, migration steps, or operational limits. Use N/A if unchanged. -->
+
+## Rollback
+
+<!-- What reverts this change, and what published feed state survives? Use N/A for docs-only changes. -->
