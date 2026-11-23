@@ -1,0 +1,83 @@
+name: Question / Support
+description: Ask about feed selection, UniFi import, self-hosting or schedule behavior
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check [UniFi setup](https://github.com/developingchet/blocklist-abuseipdb-unifi/blob/main/README.md#unifi-setup),
+        [Available feeds](https://github.com/developingchet/blocklist-abuseipdb-unifi/blob/main/README.md#available-feeds)
+        and [Operating the mirror](https://github.com/developingchet/blocklist-abuseipdb-unifi/blob/main/docs/OPERATIONS.md)
+        before opening a question.
+
+        Do not report security vulnerabilities here. Use
+        [private vulnerability reporting](https://github.com/developingchet/blocklist-abuseipdb-unifi/security/advisories/new).
+        Logs and manifests can contain tokens and private network details: remove
+        them before pasting anything.
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Feed window and part selection
+        - UniFi import, capacity or refresh
+        - Host your own mirror
+        - Schedule, freshness or missed runs
+        - Feed format and manifest fields
+        - Local conversion and recovery
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: feed
+    attributes:
+      label: Feed URL and time window
+      description: Include the exact part URL, or write N/A.
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Gateway model and UniFi versions
+      description: Or the OS and Python version for a local run; write N/A if neither applies.
+
+  - type: input
+    id: revision
+    attributes:
+      label: Manifest revision or workflow run
+      description: Link the run, or include upstream_revision from manifest.json; write N/A if unknown.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What are you trying to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried, and what happened?
+      description: Include imported counts or refresh status when the question concerns UniFi.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or manifest excerpt
+      description: Remove tokens, credentials and private network details before pasting.
+      render: text
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: sanitized
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed tokens and private network details from anything I pasted
+          required: true

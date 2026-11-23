@@ -2,6 +2,11 @@ name: Feature request
 description: Suggest an improvement to the mirror or its documentation
 labels: [enhancement]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include exploit details, credentials or private network details.
+        Report vulnerabilities through the private security link instead.
   - type: textarea
     id: problem
     attributes:
@@ -18,3 +23,8 @@ body:
     id: alternatives
     attributes:
       label: Alternatives and tradeoffs
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and compatibility
+      description: Note any effect on feed URLs, part counts, existing subscriptions or freshness checks.

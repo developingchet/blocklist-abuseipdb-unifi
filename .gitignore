@@ -4,3 +4,8 @@ feeds/
 .feeds-*/
 .feeds.lock
 .feeds.previous/
+
+# Local agent instruction files (never committed)
+CLAUDE.md
+CLAUDE.local.md
+.claude/

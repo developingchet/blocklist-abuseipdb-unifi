@@ -51,7 +51,15 @@ Times are UTC. [GitHub schedules can be delayed, dropped, or disabled](https://d
 
 [Local commands, recovery, monitoring, and deployment checks](docs/OPERATIONS.md)
 
-[Report a bug](https://github.com/developingchet/blocklist-abuseipdb-unifi/issues/new/choose) · [Contribute](CONTRIBUTING.md) · [Security disclosure](.github/SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md)
+[Report a bug](https://github.com/developingchet/blocklist-abuseipdb-unifi/issues/new/choose) · [Support](SUPPORT.md) · [Contribute](CONTRIBUTING.md) · [Security disclosure](.github/SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md)
+
+## Support
+
+Usage questions and setup help go to [SUPPORT.md](SUPPORT.md); bugs and feature
+requests use the issue forms. Report vulnerabilities privately as [the security
+policy](.github/SECURITY.md) describes. Upstream data errors belong to borestad
+or AbuseIPDB, and gateway issues belong to Ubiquiti. Contributors can start with
+[AGENTS.md](AGENTS.md).
 
 ## Credits and permission
 
