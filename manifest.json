@@ -1,0 +1,276 @@
+{
+  "chunk_size": 100000,
+  "feeds": {
+    "abuseipdb-s100-120d": {
+      "csv": "abuseipdb-s100-120d.csv",
+      "entries": 354019,
+      "sha256_source": "ec929130324c028348908cccba8fbff316baa84690298b309b5211e8ddfc5c8f",
+      "sha256_txt": "2d2cc6086d0254c793cf26d53cd65562dce49e8d8833193e9e06f2b9edc3412c",
+      "txt": "abuseipdb-s100-120d.txt",
+      "unifi_parts": [
+        {
+          "entries": 88504,
+          "file": "abuseipdb-s100-120d-unifi-01.txt",
+          "sha256": "d50d0ea5d1545451ae58df85d1db383a26defc037ec2733918c3234813b5b2af"
+        },
+        {
+          "entries": 88505,
+          "file": "abuseipdb-s100-120d-unifi-02.txt",
+          "sha256": "4a03cb04de0237f0af4caddd79aab02bf483ba7aabce116e51ee0d3d8f0e18bc"
+        },
+        {
+          "entries": 88505,
+          "file": "abuseipdb-s100-120d-unifi-03.txt",
+          "sha256": "ab94da1b7d12a61fce74bc5aa8d1d70eeddea13d77352b734f09f6dbf367ede8"
+        },
+        {
+          "entries": 88505,
+          "file": "abuseipdb-s100-120d-unifi-04.txt",
+          "sha256": "9d2828fb0075915b2cf3cbf3d8f9ce97eef5bae01020e88a39157ce10f8a0b02"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:35Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-120d.ipv4"
+    },
+    "abuseipdb-s100-14d": {
+      "csv": "abuseipdb-s100-14d.csv",
+      "entries": 137318,
+      "sha256_source": "c5f274e825786d9d8bc9eb677792727a314744a1d1d90fb1b4789c8a29c2a729",
+      "sha256_txt": "d07c4b8677ed7b6cd0d33253666bee1351165c87231eaf4f7309415853f8ab91",
+      "txt": "abuseipdb-s100-14d.txt",
+      "unifi_parts": [
+        {
+          "entries": 68659,
+          "file": "abuseipdb-s100-14d-unifi-01.txt",
+          "sha256": "3ad971fad4f251774601fc02b04d1f5f9cfb9d20fee7262a4499fa0567e57bdd"
+        },
+        {
+          "entries": 68659,
+          "file": "abuseipdb-s100-14d-unifi-02.txt",
+          "sha256": "9a72812a8cec2464eebee51b6d979e21ccfcd257916ae1036ab6a8f9b4102683"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:27Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-14d.ipv4"
+    },
+    "abuseipdb-s100-180d": {
+      "csv": "abuseipdb-s100-180d.csv",
+      "entries": 449538,
+      "sha256_source": "69a62d588ce2f055d102f1407ef46c59754d81bed3bed03199e0a1a320ee6327",
+      "sha256_txt": "c75aea60ed3aea6b81296332c19ca4235f7e0688ed9d156c5e17ad4a7755b044",
+      "txt": "abuseipdb-s100-180d.txt",
+      "unifi_parts": [
+        {
+          "entries": 89907,
+          "file": "abuseipdb-s100-180d-unifi-01.txt",
+          "sha256": "a12b63ce5ea75fc97140c098c3c872aff4c897893b946c62a8ca680a82fc3900"
+        },
+        {
+          "entries": 89908,
+          "file": "abuseipdb-s100-180d-unifi-02.txt",
+          "sha256": "1ee2b3e620831320721cd8938374c2d781de687793d002af8d5daa9d12bb84e9"
+        },
+        {
+          "entries": 89907,
+          "file": "abuseipdb-s100-180d-unifi-03.txt",
+          "sha256": "6266c8f1d27e45f014e099192a9d74ee52844df7de9136454d046be27b2bdeb0"
+        },
+        {
+          "entries": 89908,
+          "file": "abuseipdb-s100-180d-unifi-04.txt",
+          "sha256": "32c48aaced23791409f988e5c807e0cff1450abbff354380d5986ee8e327fd23"
+        },
+        {
+          "entries": 89908,
+          "file": "abuseipdb-s100-180d-unifi-05.txt",
+          "sha256": "80297cdd20b76d9aaebcc4ba9d7273b22366dec4453cc5af815c95e5d8b81a4d"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:38Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-180d.ipv4"
+    },
+    "abuseipdb-s100-1d": {
+      "csv": "abuseipdb-s100-1d.csv",
+      "entries": 92820,
+      "sha256_source": "c399d7bbdfba1d41e626890c750ceee6efe20ab50167aabaf66295d3389fdc8a",
+      "sha256_txt": "4f418295fe43f06388269f370458f1e3c64e97e6efbe7437c2ab5599316932e6",
+      "txt": "abuseipdb-s100-1d.txt",
+      "unifi_parts": [
+        {
+          "entries": 92820,
+          "file": "abuseipdb-s100-1d-unifi-01.txt",
+          "sha256": "4f418295fe43f06388269f370458f1e3c64e97e6efbe7437c2ab5599316932e6"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:26Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-1d.ipv4"
+    },
+    "abuseipdb-s100-30d": {
+      "csv": "abuseipdb-s100-30d.csv",
+      "entries": 163600,
+      "sha256_source": "c8790e97e50db1c1a4636b4c4f82016ee822f46f157c984cd98966af8b345ebe",
+      "sha256_txt": "0b62ccd0d1b24e77817de849bce6954fd1ab4c7590f687deefd4388db32b3c38",
+      "txt": "abuseipdb-s100-30d.txt",
+      "unifi_parts": [
+        {
+          "entries": 81800,
+          "file": "abuseipdb-s100-30d-unifi-01.txt",
+          "sha256": "5f85a7e4fffb07084c44787fe596dfc80aa519cacdb5bd153f1f2be9f8941940"
+        },
+        {
+          "entries": 81800,
+          "file": "abuseipdb-s100-30d-unifi-02.txt",
+          "sha256": "dc2953a33652fbdd8b0338a968f28fb0607dd91a4f7d72959ee2e8e00999e32e"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:28Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-30d.ipv4"
+    },
+    "abuseipdb-s100-365d": {
+      "csv": "abuseipdb-s100-365d.csv",
+      "entries": 765882,
+      "sha256_source": "128613710afa32db4d02ab38fa950486bc20301c903a365972cc6de708a515f8",
+      "sha256_txt": "9a30820cd5b0e57bf428e33e59055b4f35ee4ce53018073a96968b9b3e6d1678",
+      "txt": "abuseipdb-s100-365d.txt",
+      "unifi_parts": [
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-01.txt",
+          "sha256": "4590de1e3822c55b54bd2d3ec2afe024940d7cfc4ed81285d1e48393c855f344"
+        },
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-02.txt",
+          "sha256": "16d6f146b7f70a641f320313d46fd1a5e579463de5e32c3b0e421959b60edbb9"
+        },
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-03.txt",
+          "sha256": "4e3c62597a72be1f9d49d2cc77ea833fb10fd23d33ffe489de3e0ebb026b6d2b"
+        },
+        {
+          "entries": 95736,
+          "file": "abuseipdb-s100-365d-unifi-04.txt",
+          "sha256": "c0f79cba3bb8a4923c72b768c2a66f2e3cc382b802056f1a5c1e6f22730ea4e7"
+        },
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-05.txt",
+          "sha256": "e061ac4afe0fd5a7c597791067d09a135a6f73d4e7dd533bda11de84ef71ebc0"
+        },
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-06.txt",
+          "sha256": "2640dca8ab6d5e52b830ee546cc234338a282695850fb0e09cd10d321eedbcd1"
+        },
+        {
+          "entries": 95735,
+          "file": "abuseipdb-s100-365d-unifi-07.txt",
+          "sha256": "786817216e7cb515268f059eb3fc413cd6c30a89ab9d925d97e79cafe6535fc9"
+        },
+        {
+          "entries": 95736,
+          "file": "abuseipdb-s100-365d-unifi-08.txt",
+          "sha256": "f4f41ff38b2639013e7de7be6801cc78f33f06210749ed438193e2fb7a6b0912"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:47Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-365d.ipv4"
+    },
+    "abuseipdb-s100-3d": {
+      "csv": "abuseipdb-s100-3d.csv",
+      "entries": 98671,
+      "sha256_source": "74e330bfa44522a2c12cf1183ac0e8fb59b567ecb0d9f005eb688c9540d3bb30",
+      "sha256_txt": "197c7c41ba3418fe0100eb36ff2578a7a8cb731b36e7829424516dcf57a26927",
+      "txt": "abuseipdb-s100-3d.txt",
+      "unifi_parts": [
+        {
+          "entries": 98671,
+          "file": "abuseipdb-s100-3d-unifi-01.txt",
+          "sha256": "197c7c41ba3418fe0100eb36ff2578a7a8cb731b36e7829424516dcf57a26927"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:26Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-3d.ipv4"
+    },
+    "abuseipdb-s100-60d": {
+      "csv": "abuseipdb-s100-60d.csv",
+      "entries": 225213,
+      "sha256_source": "8de02a9de072056c98002983eaa38605559cdb4d52b96b2ff4bdf714a06c3876",
+      "sha256_txt": "332a75dc9a217b1d06b681daba8a9447ce9539525584e9b2058a68d6f89a42bf",
+      "txt": "abuseipdb-s100-60d.txt",
+      "unifi_parts": [
+        {
+          "entries": 75071,
+          "file": "abuseipdb-s100-60d-unifi-01.txt",
+          "sha256": "b096feb7a07c7e7bc9760d0103a7893b012b9c4b16112996a6456ab957ef05b8"
+        },
+        {
+          "entries": 75071,
+          "file": "abuseipdb-s100-60d-unifi-02.txt",
+          "sha256": "3b9ed71ef76f8836035cc8c4c63dfd3e5aaf02ed71657e8883e25b2eea1be126"
+        },
+        {
+          "entries": 75071,
+          "file": "abuseipdb-s100-60d-unifi-03.txt",
+          "sha256": "d42c16c565fb0f66f06005380acb24d72fa62accc6136133d8a547adf07bb85d"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:30Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-60d.ipv4"
+    },
+    "abuseipdb-s100-7d": {
+      "csv": "abuseipdb-s100-7d.csv",
+      "entries": 117198,
+      "sha256_source": "b4b426957c00dabb72ad9f414be54a4e037b079d056235e6ed4ff503e58cb9ba",
+      "sha256_txt": "0257377a2d10eb62a8dca10512c33d1b3a649bdf4615e7e98d6885398a99c9d3",
+      "txt": "abuseipdb-s100-7d.txt",
+      "unifi_parts": [
+        {
+          "entries": 58599,
+          "file": "abuseipdb-s100-7d-unifi-01.txt",
+          "sha256": "d1147dd9f2619d1dde2940e3dbfb8c3d0a95cf7fbedcbb25d610c37bee9111ab"
+        },
+        {
+          "entries": 58599,
+          "file": "abuseipdb-s100-7d-unifi-02.txt",
+          "sha256": "d7095e93607d523238efbbfe955df6dd310c574d0157360ce07384389c077645"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:27Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-7d.ipv4"
+    },
+    "abuseipdb-s100-90d": {
+      "csv": "abuseipdb-s100-90d.csv",
+      "entries": 297020,
+      "sha256_source": "8c91c465e213b0fba7a588c3acdd5d72a35798acc7e379fc6531c44585c4a39f",
+      "sha256_txt": "816757137d49959ce5379ab2251aa2432743a78a4d59a1ddb11ea9ca1fbd49cf",
+      "txt": "abuseipdb-s100-90d.txt",
+      "unifi_parts": [
+        {
+          "entries": 99006,
+          "file": "abuseipdb-s100-90d-unifi-01.txt",
+          "sha256": "ee77760b72db38e6c57c23ff3eaf224a49d3c2cf224c5e1b954489899d7e8343"
+        },
+        {
+          "entries": 99007,
+          "file": "abuseipdb-s100-90d-unifi-02.txt",
+          "sha256": "4ca607d4c36fa5ca7fa244e068d6e8f77e960cab72321b29829471eb855ed43b"
+        },
+        {
+          "entries": 99007,
+          "file": "abuseipdb-s100-90d-unifi-03.txt",
+          "sha256": "e1afa2101b7940ce7aba98ffb48f1c7c760f26e686ca1f168eea295019dd64d5"
+        }
+      ],
+      "upstream_updated_at": "2026-11-28T20:06:32Z",
+      "upstream_url": "https://raw.githubusercontent.com/borestad/blocklist-abuseipdb/0298427aa8cbcaa565b108c1557871556c8ed11b/abuseipdb-s100-90d.ipv4"
+    }
+  },
+  "generated_at": "2026-11-28T20:15:46Z",
+  "mirror": "Unofficial UniFi TXT/CSV mirror of borestad/blocklist-abuseipdb",
+  "schema_version": 1,
+  "upstream": "borestad/blocklist-abuseipdb",
+  "upstream_revision": "0298427aa8cbcaa565b108c1557871556c8ed11b",
+  "upstream_url": "https://github.com/borestad/blocklist-abuseipdb"
+}
